@@ -1,8 +1,17 @@
 #!/bin/bash
 
-# 建立環境（如果還沒建立過）
-conda env create -f environment.yml --force
+ENV_NAME="Graphql"
 
-# 啟用環境
+if conda env list | grep -q "^$ENV_NAME\s"; then
+    echo "Environment $ENV_NAME already exists. Skipping creation."
+else
+    echo "Creating environment $ENV_NAME..."
+    conda env create -f environment.yml
+fi
+
 source $(conda info --base)/etc/profile.d/conda.sh
-conda activate Graphql
+conda activate $ENV_NAME
+
+# 你想跑的命令，像是啟動伺服器
+# python app/main.py
+
