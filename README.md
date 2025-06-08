@@ -1,1 +1,3 @@
 # Graphql
+
+run start.sh
