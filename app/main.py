@@ -9,6 +9,7 @@ with open("app/schema.graphql", "r") as f:
 
 # 組合 schema
 schema = make_executable_schema(type_defs, query, mutation)
+print("GraphQL schema loaded successfully.")
 
 # 啟用 FastAPI 應用
 app = FastAPI()
