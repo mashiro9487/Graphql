@@ -2,6 +2,12 @@ type Query {
   hello: String!
 }
 
+type RegisterResponse {
+  success: Boolean!
+  message: String
+}
+
 type Mutation {
   login(email: String!, password: String!): String!
+  register(email: String!, password: String!): RegisterResponse!
 }
