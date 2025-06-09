@@ -1,0 +1,19 @@
+<component name="ProjectRunConfigurationManager">
+    <configuration default="false" name="Python tests for test_multi_delete_user.test_create_and_partial_delete_users"
+                   type="tests" factoryName="Autodetect" singleton="false" nameIsGenerated="true">
+        <module name="Graphql"/>
+        <option name="ENV_FILES" value=""/>
+        <option name="INTERPRETER_OPTIONS" value=""/>
+        <option name="PARENT_ENVS" value="true"/>
+        <option name="SDK_HOME" value=""/>
+        <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test"/>
+        <option name="IS_MODULE_SDK" value="true"/>
+        <option name="ADD_CONTENT_ROOTS" value="true"/>
+        <option name="ADD_SOURCE_ROOTS" value="true"/>
+        <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py"/>
+        <option name="_new_additionalArguments" value="&quot;&quot;"/>
+        <option name="_new_target" value="&quot;test_multi_delete_user.test_create_and_partial_delete_users&quot;"/>
+        <option name="_new_targetType" value="&quot;PYTHON&quot;"/>
+        <method v="2"/>
+    </configuration>
+</component>
