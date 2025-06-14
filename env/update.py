@@ -1,9 +1,20 @@
 import os
-
+import subprocess
 def update_environment_yml():
     # 匯出 conda 環境，去掉 prefix 行
-    os.system('conda env export --no-builds | grep -v "^prefix: " > environment.yml')
-    print("environment.yml updated")
+
+    with open("environment.yml", "w") as f:
+        result = subprocess.run(
+            ["conda", "env", "export", "--name", "Graphql", "--no-builds"],
+            stdout=f,
+            stderr=subprocess.PIPE,
+            text=True
+        )
+
+    if result.returncode == 0:
+        print("✅ environment.yml updated.")
+    else:
+        print("❌ Failed to export environment:", result.stderr)
 
 def generate_clean_requirements():
     # pip freeze 產生 requirements.txt
