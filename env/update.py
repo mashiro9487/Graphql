@@ -7,24 +7,7 @@ def update_environment_yml():
 
 def generate_clean_requirements():
     # pip freeze 產生 requirements.txt
-    os.system('pip freeze > requirements.txt')
-    print("requirements.txt generated")
-
-    # 讀取並過濾包含本地路徑的套件
-    with open("requirements.txt", "r") as f:
-        lines = f.readlines()
-
-    clean_lines = []
-    for line in lines:
-        if " @ file://" in line:
-            # 跳過或你也可以在這裡做進一步處理
-            continue
-        else:
-            clean_lines.append(line)
-
-    with open("requirements.txt", "w") as f:
-        f.writelines(clean_lines)
-    print("requirements.txt cleaned from local path entries")
+    os.system('pip list --format=freeze > requirements.txt')
 
 if __name__ == "__main__":
     update_environment_yml()
